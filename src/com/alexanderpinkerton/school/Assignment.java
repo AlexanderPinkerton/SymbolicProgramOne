@@ -63,9 +63,23 @@ public class Assignment {
     }
 
 
-    public static int[][] MatrixMultiply(int[][] A, int[][] B){
+    public static Matrix MatrixMultiply(Matrix A, Matrix B){
 
-        return null;
+        if(A.columns == B.rows) {
+            Matrix result = new Matrix(A.rows, B.columns);
+
+            for (int i = 0; i < A.rows; i++) { // aRow
+                for (int j = 0; j < B.columns; j++) { // bColumn
+                    for (int k = 0; k < A.columns; k++) { // aColumn
+                        result.getData()[i][j] += A.getData()[i][k] * B.getData()[k][j];
+                    }
+                }
+            }
+
+            return result;
+        }else{
+            return null;
+        }
     }
 
 }
