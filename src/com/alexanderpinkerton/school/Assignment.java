@@ -42,9 +42,24 @@ public class Assignment {
 
 
 
-    public static int[][] MatrixAdd(int[][] A, int[][] B){
+    public static Matrix MatrixAdd(Matrix A, Matrix B){
 
-        return null;
+        if(A.rows == B.rows && A.columns == B.columns){
+            Matrix result = new Matrix(A.rows,A.columns);
+
+            for(int i=0;i<A.rows;i++){
+                for(int j=0;j<A.columns;j++){
+                    result.setValue(i,j, A.getValue(i,j) + B.getValue(i,j));
+                }
+            }
+
+            return result;
+
+        }else{
+            //Throw exceptions.
+            return null;
+        }
+
     }
 
 
