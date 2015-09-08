@@ -1,5 +1,6 @@
 package com.alexanderpinkerton.school;
 
+
 /**
  * Created by Ace on 9/2/2015.
  */
@@ -81,5 +82,74 @@ public class Assignment {
             return null;
         }
     }
+
+
+
+
+
+    public static int[] union(int[]... sets){
+        //This function will take any number of integer sets and find the union.
+        int maxsize = 0;
+        int resultSize = 0;
+        int resultIndex = 0;
+        int negOffset = 0;
+
+        //Find the max size the frequency array needs to be.
+        for(int[] set : sets){
+            maxsize += set.length;
+            for(int i=0;i<set.length;i++){
+                if(set[i] < negOffset){
+                    negOffset = set[i];
+                }
+            }
+        }
+
+        //Convert negative offset to positive.
+        negOffset *= -1;
+
+        //Create the frequency array with the total size of elements.
+        int[] frequencies = new int[maxsize + negOffset];
+
+        //Loop through all of the sets and update their counts in the frequency array.
+        for(int[] set : sets){
+            for(int i=0;i<set.length;i++){
+                //If a number exists and has not been found before, increase the result array size.
+                if(frequencies[set[i] + negOffset] == 0){
+                    resultSize++;
+                }
+                frequencies[set[i] + negOffset]++;
+            }
+        }
+
+        //Create the result array to return.
+        int[] result = new int[resultSize];
+
+        //Loop through the frequency array and add each number to the result where the frequency is greater than one.
+        for(int i=0;i<frequencies.length;i++){
+            if(frequencies[i] > 0){
+                result[resultIndex] = i - negOffset;
+                resultIndex++;
+            }
+        }
+
+        return result;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

@@ -1,5 +1,7 @@
 package com.alexanderpinkerton.school;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -37,6 +39,19 @@ public class Main {
 
         System.out.println("---Problem Three B----");
         Assignment.MatrixMultiply(A,B).print();
+
+
+
+        System.out.println("---Problem Four A----");
+
+        int[] setA = {1,2,3,4,7};
+        int[] setB = {0,2,4,5,6};
+
+        System.out.println(Arrays.toString(Assignment.union(setA,setB)));
+
+
+
+        System.out.println("---Problem Four B----");
 
     }
 }
