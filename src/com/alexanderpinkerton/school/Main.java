@@ -53,5 +53,6 @@ public class Main {
 
         System.out.println("---Problem Four B----");
 
+        System.out.println(Arrays.toString(Assignment.intersection(setA,setB)));
     }
 }
