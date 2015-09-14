@@ -1,9 +1,10 @@
 package com.alexanderpinkerton.school;
 
+/***
+ * Author: Alexander Pinkerton
+ * Date: 9/01/2015
+ ***/
 
-/**
- * Created by Ace on 9/2/2015.
- */
 public class Assignment {
 
     //This is a recursive implementation of GCD calculation.

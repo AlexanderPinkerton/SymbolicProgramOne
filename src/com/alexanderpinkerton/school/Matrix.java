@@ -1,8 +1,10 @@
 package com.alexanderpinkerton.school;
 
-/**
- * Created by Ace on 9/3/15.
- */
+/***
+ * Author: Alexander Pinkerton
+ * Date: 9/01/2015
+ ***/
+
 public class Matrix {
 
     int rows;
