@@ -45,7 +45,8 @@ public class Assignment {
 
 
     public static Matrix MatrixAdd(Matrix A, Matrix B){
-
+        //Add all ijs with the corresponding ijs
+        //If the matrices are of different size, return null;
         if(A.rows == B.rows && A.columns == B.columns){
             Matrix result = new Matrix(A.rows,A.columns);
 
@@ -56,17 +57,14 @@ public class Assignment {
             }
 
             return result;
-
         }else{
             //Throw exceptions.
             return null;
         }
-
     }
 
 
     public static Matrix MatrixMultiply(Matrix A, Matrix B){
-
         if(A.columns == B.rows) {
             Matrix result = new Matrix(A.rows, B.columns);
 
@@ -77,7 +75,6 @@ public class Assignment {
                     }
                 }
             }
-
             return result;
         }else{
             return null;
