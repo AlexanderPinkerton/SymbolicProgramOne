@@ -17,7 +17,8 @@ public class Main {
 
         System.out.println("---Problem One B----");
         System.out.println(Assignment.gcd((long) Math.pow(5, 12) - 1, (long) Math.pow(7, 21) - 1));
-
+        System.out.println("or "  + Assignment.gcd((long) Math.pow(5, 12) - 1, 558545864083284006l));
+        //558545864083284006
 
 
         System.out.println("---Problem Two A----");
